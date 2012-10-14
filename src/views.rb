@@ -4,7 +4,7 @@ module Templates
   class Skeleton
     
     def Skeleton.load_template(filename)
-      ERB.new(File.read(Daptarius.config.templatedir.join(filename)))
+      ERB.new(File.read(Daptrius.config.templatedir.join(filename)))
     end
     
     def Skeleton.hook(*hooknames)
@@ -30,11 +30,11 @@ module Templates
     end
     
     def stylelink(sheetname)
-      %Q{<link rel="stylesheet" href="#{Daptarius.static_url(sheetname)}"/>}
+      %Q{<link rel="stylesheet" href="#{Daptrius.static_url(sheetname)}"/>}
     end
     
     def link_for_page(pg, anchor=nil)
-      url = Daptarius.url(pg.canonical_path)
+      url = Daptrius.url(pg.canonical_path)
       text = anchor ? anchor : page.title
       %Q{<a href="#{url}">#{text}</a>}
     end
@@ -51,7 +51,7 @@ module Templates
     def initialize(pagetitle)
       showheader = true
       showfooter = true
-      sitetitle = Daptarius.sitename
+      sitetitle = Daptrius.sitename
     end
   end
   
