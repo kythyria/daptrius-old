@@ -45,12 +45,13 @@ module Templates
     
     @@template = load_template("skeleton.erb")
     
-    attr :sitetitle, :pagetitle, :showheader, :showfooter
+    attr :sitetitle, :pagetitle, :showheader, :showfooter, :showsidebar
     hook :toolbox, :head, :header, :content, :sidebar, :pagefooter
     
     def initialize(pagetitle)
       showheader = true
       showfooter = true
+      showsidebar = true
       sitetitle = Daptrius.sitename
     end
   end
