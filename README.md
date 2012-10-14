@@ -4,6 +4,6 @@ Daptrius
 Simple wiki/CMS wrapper for Etherpad Lite.
 
 Prerequisites 
-* [https://github.com/Pita/etherpad-lite/](Etherpad Lite)
-* [https://rubygems.org/gems/etherpad-lite](The ruby client)
-* [http://datamapper.org/](DataMapper) and a compatible database
+* [Etherpad Lite](https://github.com/Pita/etherpad-lite/)
+* [The ruby client](https://rubygems.org/gems/etherpad-lite)
+* [DataMapper](http://datamapper.org/) and a compatible database
