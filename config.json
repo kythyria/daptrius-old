@@ -1,9 +1,9 @@
 {
   "etherpad" : {
-    "key" : "changeme",
-    "url" : "http://etherpad.berigora.net/"
+    "key" : null,
+    "url" : "http://localhost:9000"
   },
-  "database" : "sqlite://foo.sqlite",
-  "base_url" : "http://fish.berigora.net/",
-  "sitename" : "FISHwiki"
+  "database" : null,
+  "base_url" : "http://localhost:8080/",
+  "site_name" : "FISHwiki"
 }

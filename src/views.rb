@@ -4,7 +4,7 @@ module Templates
   class Skeleton
     
     def Skeleton.load_template(filename)
-      ERB.new(File.read(Daptrius.config.templatedir.join(filename)))
+      ERB.new(File.read(Daptrius.templatedir.join(filename)))
     end
     
     def Skeleton.hook(*hooknames)

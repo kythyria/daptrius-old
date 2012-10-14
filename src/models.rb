@@ -1,3 +1,5 @@
+require 'data_mapper'
+
 class Page
   include DataMapper::Resource
   property :name,  String, :key => true
@@ -39,3 +41,5 @@ class User
   property :name,     String, :required => true
   property :password, String, :required => true
 end
+
+DataMapper.finalize
