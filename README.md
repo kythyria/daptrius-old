@@ -1,4 +1,4 @@
-daptrius
+Daptrius
 ========
 
-Simple wiki/CMS wrapper for Etherpad Lite
+Simple wiki/CMS wrapper for Etherpad Lite.

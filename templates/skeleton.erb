@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <title><%= pagetitle %></title>
+    <%= stylelink "core.css" %>
+    <%= head %>
+  </head>
+  <body>
+    <header id="topbar">
+      <h1><%= sitetitle %></h1>
+      <div id="toolbox">
+        <%= toolbox %>
+      </div>
+    </header>
+    <div id="sidebar">
+      <%= sidebar %>
+    </div>
+    <article id="contentpane">
+      <% if showheader %>
+      <header>
+        <h1><%= pagetitle %></h1>
+        <%= header %>
+      </header>
+      <% end %>
+      <%= content %>
+    </article>
+    <%if showfooter %>
+    <footer id="footbar">
+      <p>Daptrius 0.1</p>
+      <%= pagefooter %>
+    </footer>
+    <% end %>
+    <%= scripts %>
+  </body>
+</html>

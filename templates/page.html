@@ -1,0 +1,116 @@
+<?xml version="1.0"?>
+<!--<!DOCTYPE html>-->
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <title>$TITLE</title>
+    <style>
+    * { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+      body { margin: 0px; padding: 0px; background: black; color: #888;}
+      a { text-decoration: inherit; color: #33B; }
+      a:hover { text-decoration: underline; }
+      a:visited { color: #7C33BC; }
+      
+      #topbar { background: #0B3661; /*border-bottom: 1px solid grey;*/ padding: 0.5em; position: relative; color: white;}
+      #topbar h1 { margin: 0px; color: white; font-size: x-large; }
+      #topbar #toolbox { position: absolute; right: 0.5em; top: 0.5em;}
+      #topbar a { color: #349AFF; }
+      #topbar a:hover { color: white; text-decoration: none;}
+      
+      #sidebar { width: 12em; float: left; padding: 0.4em; border-right: 1px solid #444; margin-left: 1px;}
+      
+      #contentpane { background: black; border-left: 1px solid #444; padding: 0.5em; margin-left: 12em; }
+      #contentpane strong { color: #aaa; }
+      #contentpane header { /*color: #6464CE;*/ /*color: #8EADCC;*/ color: #aaa;}
+      #contentpane header h1 { margin: 0px;  font-size: 2em;}
+      
+      #footbar { border-top: 1px solid #444; font-size: small; color: #444; padding: 0.5em; clear: both;}
+      
+      /*view-specific*/
+      
+      #sidebar nav ul { font-size: 0.9em; list-style: none; margin: 0px; padding: 0px;}
+      #sidebar nav li.intermediate:before { font-family: monospace; content: "\2191"; padding-right: 0.5em;}
+      #sidebar nav li.current { font-weight: bold; color: #aaa;}
+      #sidebar nav li.current:before { font-weight: normal; font-family: monospace; content: "\2514"; padding-right: 0.5em;}
+      #sidebar nav li.subpage { margin-left: 0.5em; }
+      #sidebar nav li.subpage:before { font-family: monospace; content: "\2514"; padding-right: 0.5em;}
+      
+      #contentpane header .byline { font-size: 0.8em; color: #777;}
+      #contentpane header .byline:before { content: "Editors: "; font-weight: bold;}
+    </style>
+  </head>
+  <body>
+    <header id="topbar">
+      <h1>FISHwiki</h1>
+      <div id="toolbox">
+        <a href="/daptrius/pages/this" style="font-size: 1.5em;">✎…</a>
+      </div>
+    </header>
+    <div id="sidebar">
+      <nav>
+        <ul>
+          <li class="root"><a href="/">Root</a></li>
+          <li class="intermediate"><a href="/">Intermediate</a></li>
+          <li class="intermediate"><a href="/">Intermediate</a></li>
+          <li class="current">Current</li>
+          <li class="subpage"><a href="/">Subpage</a></li>
+          <li class="subpage"><a href="/">Subpage</a></li>
+          <li class="subpage"><a href="/">Subpage</a></li>
+        </ul>
+      </nav>
+    </div>
+    <article id="contentpane">
+      <header>
+        <h1>$TITLE</h1>
+        <div class="byline">Kythyria, Neko_krow, TDH</div>
+      </header>
+      <p>Lorem ipsum <a href="http://berigora.neregt">dolor</a> sit amet, consectetur adipiscing elit. Nullam at
+      tellus ac tellus eleifend fringilla. In est dolor, aliquet eget egestas
+      ut, vestibulum et magna. Nulla facilisi. Quisque consequat quam quis
+        tellus mollis <strong>vitae suscipit urna tincidunt</strong>. Vivamus nec ligula est,
+      consequat volutpat urna. Duis quis libero massa, rutrum rhoncus orci. In
+      hac habitasse platea dictumst. Quisque orci velit, facilisis et tristique
+      eleifend, volutpat eu neque. Nunc ac sollicitudin augue. Fusce sodales
+      tortor tortor, iaculis ullamcorper libero. Mauris consequat tempus
+      scelerisque. Pellentesque aliquet blandit eros nec eleifend. Nullam
+      ultrices euismod magna vitae sollicitudin. Nam feugiat suscipit metus id
+      tempor. Mauris ac ligula et orci dignissim tincidunt a in mi.</p>
+      <p>Maecenas sodales orci vel ipsum ultricies a sodales mi elementum.
+      Mauris quis elit arcu, quis iaculis sapien. Integer vitae tellus quam,
+      elementum ultricies est. Donec et odio eget tortor porttitor ultrices nec
+      eu massa. Pellentesque vitae nibh luctus metus consequat fringilla. Ut
+      sodales, lorem ut tempor malesuada, turpis urna malesuada tellus, non
+      dignissim tortor turpis ac velit. Nam quis nisi lectus.</p>
+      <p>Donec elementum nunc in augue suscipit faucibus tempor sapien dictum.
+      Fusce nec nunc mauris. Suspendisse pellentesque sollicitudin consectetur.
+      Cras tristique sollicitudin urna vel tristique. Cras a enim in ligula
+      semper vulputate eu ac enim. Class aptent taciti sociosqu ad litora
+      torquent per conubia nostra, per inceptos himenaeos. Duis quis diam vel
+      mauris dignissim pretium. In ac arcu leo. Nunc suscipit cursus purus nec
+      mattis. In fringilla gravida posuere. Nam sodales lectus id ante
+      pellentesque sodales. Donec ultricies ante felis. Curabitur venenatis
+      malesuada condimentum. Curabitur arcu mi, imperdiet vitae varius at,
+      pretium ultrices nibh. Nunc tincidunt cursus mi quis sagittis. Nulla in
+      cursus odio.</p>
+      <p>Vestibulum et lectus ac leo consectetur mollis et quis massa. Proin
+      arcu felis, vestibulum vitae tincidunt auctor, imperdiet a est. Nulla
+      augue nisl, posuere non feugiat a, tincidunt a augue. Donec at sem eu nunc
+      mattis interdum in ut nisi. Nullam eget ipsum sed augue condimentum
+      tincidunt sit amet ut mi. Nunc sit amet dui ut leo semper dignissim ut id
+      est. Nunc pretium accumsan nulla nec interdum. Pellentesque hendrerit,
+      ante ac interdum tempor, nisi mi facilisis felis, a vehicula eros arcu non
+      nibh.</p>
+      <p>Quisque id arcu a metus lacinia adipiscing. Aliquam erat volutpat.
+      Pellentesque dictum consequat enim ut accumsan. Curabitur ut accumsan
+      dolor. Nullam vel nisl orci, nec aliquet ligula. Proin non lorem leo.
+      Mauris tempus, mauris quis volutpat convallis, justo lacus vehicula lacus,
+      quis rutrum augue lorem in est. In varius metus non ante convallis
+      pellentesque. Phasellus mauris arcu, consectetur sed commodo a, pretium at
+      urna.</p>
+    </article>
+    <footer id="footbar">
+      <div>Daptrius 0.1</div>
+      <div>CC-NC-SA</div>
+    </footer>
+  </body>
+</html>
