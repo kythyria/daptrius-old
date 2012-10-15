@@ -5,5 +5,10 @@
   },
   "database" : null,
   "base_url" : "http://localhost:8080/",
-  "site_name" : "FISHwiki"
+  "static_url" : "http://localhost:8080/static",
+  "site_name" : "FISHwiki",
+  "session_settings" : {
+    "expire_after" : 1872000,
+    "secret" : null
+  }
 }

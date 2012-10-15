@@ -32,6 +32,21 @@ class Page
   def siblings
     parent.children
   end
+  
+  # Return the path of this page that would be used in URLs
+  def canonical_path
+    "/" + ancestors.map{|i| URI.escape(i.slug)}.join("/")
+  end
+  
+  def pad
+    @pad = Daptrius.etherpad.pad(self.name) unless @pad
+    @pad
+  end
+  
+  def formatted_content
+    @formatted_content = @pad.html unless @formatted_content
+    @formatted_content
+  end
 end
 
 class User

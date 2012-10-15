@@ -22,6 +22,14 @@ module Daptrius
     @@config.sitename
   end
   
+  def Daptrius.config
+    @@config
+  end
+  
+  def Daptrius.etherpad
+    @@etherpad
+  end
+  
   def Daptrius.init!
     @@rootdir = Pathname.new(__FILE__).join("..")
     

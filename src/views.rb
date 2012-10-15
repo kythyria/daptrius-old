@@ -56,7 +56,7 @@ module Templates
     end
   end
   
-  class PageView
+  class Page < Skeleton
     hook_partial :toolbox "pageview_toolbox.erb"
     hook_partial :header, "pageview_header.erb"
     hook_partial :sidebar, "pageview_sidebar.erb"
@@ -69,6 +69,19 @@ module Templates
     def initialize(pg)
       super(page.title)
       page = pg
+    end
+  end
+  
+  class NotFound < Skeleton
+    hook_partial :content, "notfound_content.erb"
+    
+    def initialize()
+      super("404 Not Found")
+      showsidebar = false
+    end
+    
+    def NotFound.result
+      new.result
     end
   end
 end
