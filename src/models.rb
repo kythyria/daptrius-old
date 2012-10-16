@@ -5,7 +5,7 @@ class Page
   property :slug,  String, :length => 64 # Not required because the root doesn't have a name
   
   has n, :children, self, :child_key => [:parent_name]
-  belongs_to :parent, self
+  belongs_to :parent, self, :required => false
   
   validates_with_block :parent do
     curr = self
