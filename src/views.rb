@@ -17,8 +17,8 @@ module Templates
     
     def Skeleton.hook_add(hookname, &block)
       define_method(hookname) do
-        result = super
-        super << block.call
+        result = super()
+        super() << block.call
       end
     end
     
@@ -45,26 +45,27 @@ module Templates
     
     @@template = load_template("skeleton.erb")
     
-    attr :sitetitle, :pagetitle, :showheader, :showfooter, :showsidebar
-    hook :toolbox, :head, :header, :content, :sidebar, :pagefooter
+    attr_accessor :sitetitle, :pagetitle, :showheader, :showfooter, :showsidebar
+    hook :toolbox, :head, :header, :content, :sidebar, :pagefooter, :scripts
     
     def initialize(pagetitle)
-      showheader = true
-      showfooter = true
-      showsidebar = true
-      sitetitle = Daptrius.sitename
+      self.showheader = true
+      self.showfooter = true
+      self.showsidebar = true
+      self.sitetitle = Daptrius.site_name
+      self.pagetitle = pagetitle
     end
   end
   
   class Page < Skeleton
-    hook_partial :toolbox "pageview_toolbox.erb"
+    hook_partial :toolbox, "pageview_toolbox.erb"
     hook_partial :header, "pageview_header.erb"
     hook_partial :sidebar, "pageview_sidebar.erb"
     hook_add :content do
       page.formatted_content
     end
     
-    attr :page
+    attr_accessor :page
     
     def initialize(pg)
       super(page.title)
@@ -77,7 +78,7 @@ module Templates
     
     def initialize()
       super("404 Not Found")
-      showsidebar = false
+      self.showsidebar = false
     end
     
     def NotFound.result

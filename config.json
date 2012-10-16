@@ -4,7 +4,7 @@
     "url" : "http://localhost:9000"
   },
   "database" : null,
-  "base_url" : "http://localhost:8080/",
+  "base_url" : "http://localhost:9292/",
   "static_url" : null,
   "site_name" : "FISHwiki",
   "session_settings" : {

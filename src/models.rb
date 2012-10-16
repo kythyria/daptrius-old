@@ -1,5 +1,3 @@
-require 'data_mapper'
-
 class Page
   include DataMapper::Resource
   property :name,  String, :key => true
@@ -35,7 +33,7 @@ class Page
   
   # Return the path of this page that would be used in URLs
   def canonical_path
-    "/" + ancestors.map{|i| URI.escape(i.slug)}.join("/")
+    "/p/" + ancestors.map{|i| URI.escape(i.slug)}.join("/")
   end
   
   def pad
