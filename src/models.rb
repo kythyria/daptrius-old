@@ -1,10 +1,10 @@
 class Page
   include DataMapper::Resource
-  property :name,  String, :key => true
-  property :title, String, :required => true 
-  property :slug,  String, :required => true 
+  property :name,  String, :key => true, :length => 69
+  property :title, String, :required => true, :length => 64
+  property :slug,  String, :length => 64 # Not required because the root doesn't have a name
   
-  has n, :children, self, :child_key => [:parent_id]
+  has n, :children, self, :child_key => [:parent_name]
   belongs_to :parent, self
   
   validates_with_block :parent do
