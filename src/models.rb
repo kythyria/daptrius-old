@@ -2,7 +2,7 @@ class Page
   include DataMapper::Resource
   property :name,  String, :key => true, :length => 69
   property :title, String, :required => true, :length => 64
-  property :slug,  String, :length => 64 # Not required because the root doesn't have a name
+  property :slug,  String, :required => true, :length => 64
   
   has n, :children, self, :child_key => [:parent_name]
   belongs_to :parent, self, :required => false
@@ -42,7 +42,7 @@ class Page
   end
   
   def formatted_content
-    @formatted_content = @pad.html unless @formatted_content
+    @formatted_content = pad.html unless @formatted_content
     @formatted_content
   end
 end

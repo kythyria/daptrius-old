@@ -16,10 +16,11 @@ module Templates
     end
     
     def Skeleton.hook_add(hookname, &block)
-      define_method(hookname) do
+      define_method(("hook_on_"+hookname.to_s).to_sym, &block)
+      class_eval("def #{hookname}
         result = super()
-        super() << block.call
-      end
+        super() << hook_on_#{hookname.to_s}
+      end")
     end
     
     def Skeleton.hook_partial(hookname, filename)
@@ -58,18 +59,18 @@ module Templates
   end
   
   class Page < Skeleton
-    hook_partial :toolbox, "pageview_toolbox.erb"
-    hook_partial :header, "pageview_header.erb"
+    #hook_partial :toolbox, "pageview_toolbox.erb"
+    #hook_partial :header, "pageview_header.erb"
     hook_partial :sidebar, "pageview_sidebar.erb"
     hook_add :content do
-      page.formatted_content
+      self.page.formatted_content
     end
     
     attr_accessor :page
     
     def initialize(pg)
-      super(page.title)
-      page = pg
+      super(pg.title)
+      self.page = pg
     end
   end
   

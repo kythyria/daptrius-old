@@ -9,9 +9,10 @@ else
     %><li class="intermediate"><%= link_for_page i %></li><%
   end
   %><li class="current"><%= link_for_page page %></li><%
-  page.children.each |i|
-    %><li class="subpage"><%= link_for_page i%></li>
+  page.children.each do |i|
+    %><li class="subpage"><%= link_for_page i%></li><%
   end
+end
 %>
   </ul>
 </nav>

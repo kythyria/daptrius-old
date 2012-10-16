@@ -59,7 +59,7 @@ module Daptrius
     require 'src/servlet'
     require 'src/views'
     
-    DataMapper.auto_migrate!
+    DataMapper.auto_upgrade!
   end
 end
 

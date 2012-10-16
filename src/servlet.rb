@@ -19,6 +19,14 @@ module Daptrius
     set :root, Daptrius.rootdir
     set :static, Daptrius.static_url == Daptrius.url
     
+    get '/' do
+      redirect to('/p/') # Not got a fancy homepage yet.
+    end
+    
+    get '/p/' do
+      raise "Index not implemented yet"
+    end
+    
     get '/p/*' do |path|
       components = path.split("/")
       curr = Page.first(:parent => nil, :slug => components.first ? components.shift : "")
