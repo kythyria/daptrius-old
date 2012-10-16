@@ -30,7 +30,7 @@ module Templates
     end
     
     def stylelink(sheetname)
-      %Q{<link rel="stylesheet" href="#{Daptrius.static_url(sheetname)}"/>}
+      %Q{<link rel="stylesheet" href="#{Daptrius.static_url.join("css").join(sheetname)}"/>}
     end
     
     def link_for_page(pg, anchor=nil)

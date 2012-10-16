@@ -5,7 +5,7 @@
   },
   "database" : null,
   "base_url" : "http://localhost:8080/",
-  "static_url" : "http://localhost:8080/static",
+  "static_url" : null,
   "site_name" : "FISHwiki",
   "session_settings" : {
     "expire_after" : 1872000,
