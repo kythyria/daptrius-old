@@ -54,13 +54,16 @@ module Daptrius
     @@config.static_url ||= @@config.base_url
     
     DataMapper.setup(:default, @@config.database)
+    
+    require 'src/models'
+    require 'src/servlet'
+    require 'src/views'
+    
     DataMapper.auto_migrate!
   end
 end
 
 Daptrius.init!
 
-require 'src/models'
-require 'src/servlet'
-require 'src/views'
+
 
