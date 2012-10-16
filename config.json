@@ -1,7 +1,7 @@
 {
   "etherpad" : {
-    "key" : null,
-    "url" : "http://localhost:9000"
+    "key" : "wLz7vtoSjLofbX3vTdUoR137TUSQzIme",
+    "url" : "http://localhost:9001"
   },
   "database" : null,
   "base_url" : "http://localhost:9292/",

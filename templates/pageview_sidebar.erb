@@ -2,7 +2,7 @@
   <ul>
 <%
 if page.ancestors.length == 1
-  %><li class="current root"><%= link_for_page page %></li><%
+  %><li class="current root"><%= page.title %></li><%
 else
   %><li class="root"><%= link_for_page page.ancestors.first %></li><%
   page.ancestors[1..-2].each do |i|

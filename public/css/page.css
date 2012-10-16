@@ -1,0 +1,9 @@
+#sidebar nav ul { font-size: 0.9em; list-style: none; margin: 0px; padding: 0px;}
+#sidebar nav li.intermediate:before { font-family: monospace; content: "\2191"; padding-right: 0.5em;}
+#sidebar nav li.current { font-weight: bold; color: #aaa;}
+#sidebar nav li.intermediate + #sidebar nav li.current:before { font-weight: normal; font-family: monospace; content: "\2514"; padding-right: 0.5em;}
+#sidebar nav li.subpage { margin-left: 0.5em; }
+#sidebar nav li.subpage:before { font-family: monospace; content: "\2514"; padding-right: 0.5em;}
+
+#contentpane header .byline { font-size: 0.8em; color: #777;}
+#contentpane header .byline:before { content: "Editors: "; font-weight: bold;}

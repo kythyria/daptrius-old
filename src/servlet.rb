@@ -39,7 +39,9 @@ module Daptrius
       
       view =  Templates::Page.new(curr)
       
-      [200, {"Content-type" => "application/xhtml+xml"}, [view.result]]
+      # EP doesn't make well-formed XHTML, so use a more lenient mimetype until we 
+      # can reformat it
+      [200, {"Content-type" => "text/html"}, [view.result]]
     end
     
     not_found do

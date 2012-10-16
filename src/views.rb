@@ -59,8 +59,10 @@ module Templates
   end
   
   class Page < Skeleton
-    #hook_partial :toolbox, "pageview_toolbox.erb"
-    #hook_partial :header, "pageview_header.erb"
+    hook_partial :head, "pageview_head.erb"
+    hook_partial :toolbox, "pageview_toolbox.erb"
+    # Disabled until we have the infrastructure to talk about authors
+    #hook_partial :header, "pageview_header.erb" 
     hook_partial :sidebar, "pageview_sidebar.erb"
     hook_add :content do
       self.page.formatted_content
