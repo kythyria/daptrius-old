@@ -36,7 +36,7 @@ module Templates
     
     def link_for_page(pg, anchor=nil)
       url = Daptrius.url(pg.canonical_path)
-      text = anchor ? anchor : page.title
+      text = anchor ? anchor : pg.title
       %Q{<a href="#{url}">#{text}</a>}
     end
     

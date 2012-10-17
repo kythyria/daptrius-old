@@ -8,10 +8,11 @@ else
   page.ancestors[1..-2].each do |i|
     %><li class="intermediate"><%= link_for_page i %></li><%
   end
-  %><li class="current"><%= link_for_page page %></li><%
-  page.children.each do |i|
-    %><li class="subpage"><%= link_for_page i%></li><%
-  end
+  %><li class="current"><%= page.title %></li><%
+end
+
+page.children.each do |i|
+  %><li class="subpage"><%= link_for_page i%></li><%
 end
 %>
   </ul>
